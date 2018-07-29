@@ -40,6 +40,7 @@ switch_branches $BRANCH frameworks/base
 switch_branches $BRANCH frameworks/native
 switch_branches $BRANCH packages/apps/Jelly
 switch_branches $BRANCH packages/apps/Settings
+switch_branches $BRANCH packages/apps/Trebuchet
 switch_branches $BRANCH system/sepolicy
 switch_branches $BRANCH vendor/lineage
 switch_branches $BRANCH .repo/local_manifests
