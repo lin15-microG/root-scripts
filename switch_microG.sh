@@ -40,7 +40,6 @@ switch_branches $BRANCH frameworks/base
 switch_branches $BRANCH frameworks/native
 switch_branches $BRANCH kernel/oneplus/msm8996/
 switch_branches $BRANCH packages/apps/Camera2
-switch_branches $BRANCH packages/apps/DeskClock
 switch_branches $BRANCH packages/apps/Jelly
 switch_branches $BRANCH packages/apps/Settings
 switch_branches $BRANCH packages/apps/Trebuchet
