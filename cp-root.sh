@@ -4,6 +4,7 @@
 
 copy_files() {
 cat <<EOF
+build_amami.sh
 build_oneplus3.sh
 make_clean.sh
 switch_microG.sh
