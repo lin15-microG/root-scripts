@@ -44,6 +44,7 @@ switch_branches $BRANCH packages/apps/Dialer
 switch_branches $BRANCH packages/apps/Eleven
 switch_branches $BRANCH packages/apps/Jelly
 switch_branches $BRANCH packages/apps/Settings
+switch_branches $BRANCH packages/apps/SetupWizard
 switch_branches $BRANCH packages/apps/Trebuchet
 switch_branches $BRANCH system/core
 switch_branches $BRANCH system/sepolicy
