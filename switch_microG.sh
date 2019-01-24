@@ -25,33 +25,49 @@ switch_zpatch() {
 }
 
 case "$1" in
-  microG) BRANCH="lin-15.1-microG"
+  microG) 
+    BRANCH1="lin-15.1-microG"
+    BRANCH2="lin-15.1-microG"
+    PATCHV="S"
     ;;
-  default) BRANCH="lineage-15.1"
+  default) 
+    BRANCH1="lineage-15.1"
+    BRANCH2="lin-15.1-microG"
+    PATCHV="S"
     ;;
-  *) echo "usage: switch_microg default|microG"
-     exit
+  reference) 
+    BRANCH1="lineage-15.1"
+    BRANCH2="lineage-15.1"
+    PATCHV="N"
+    ;;
+  *) 
+    echo "usage: switch_microg.sh default | microG | reference"
+    echo "-"
+    echo "  default   - LineageOS 15.1 (with patches and fixed repos)"
+    echo "  microG    - hardened microG build"
+    echo "  reference - 100% LineageOS 15.1 (no patches - for 'repo sync')"
+    exit
     ;;   
 esac
 
-switch_zpatch $BRANCH R
+switch_zpatch $BRANCH1 R
 
-switch_branches $BRANCH frameworks/base
-switch_branches $BRANCH frameworks/native
-switch_branches $BRANCH kernel/oneplus/msm8996/
-switch_branches $BRANCH packages/apps/Camera2
-switch_branches $BRANCH packages/apps/Dialer
-switch_branches $BRANCH packages/apps/Eleven
-switch_branches $BRANCH packages/apps/LockClock
-switch_branches $BRANCH packages/apps/Jelly
-switch_branches $BRANCH packages/apps/Settings
-switch_branches $BRANCH packages/apps/SetupWizard
-switch_branches $BRANCH packages/apps/Trebuchet
-switch_branches $BRANCH system/bt
-switch_branches $BRANCH system/core
-switch_branches $BRANCH system/sepolicy
-switch_branches $BRANCH vendor/lineage
-switch_branches $BRANCH .repo/local_manifests
+switch_branches $BRANCH1 frameworks/base
+switch_branches $BRANCH1 frameworks/native
+switch_branches $BRANCH1 kernel/oneplus/msm8996/
+switch_branches $BRANCH1 packages/apps/Camera2
+switch_branches $BRANCH1 packages/apps/Dialer
+switch_branches $BRANCH2 packages/apps/Eleven
+switch_branches $BRANCH2 packages/apps/LockClock
+switch_branches $BRANCH1 packages/apps/Jelly
+switch_branches $BRANCH1 packages/apps/Settings
+switch_branches $BRANCH1 packages/apps/SetupWizard
+switch_branches $BRANCH1 packages/apps/Trebuchet
+switch_branches $BRANCH2 system/bt
+switch_branches $BRANCH1 system/core
+switch_branches $BRANCH1 system/sepolicy
+switch_branches $BRANCH1 vendor/lineage
+switch_branches $BRANCH1 .repo/local_manifests
 
-switch_zpatch $BRANCH S
+switch_zpatch $BRANCH1 $PATCHV
 
