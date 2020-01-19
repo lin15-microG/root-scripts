@@ -75,7 +75,6 @@ switch_branches $BRANCH3 device/lineage/sepolicy
 switch_branches $BRANCH3 external/selinux
 switch_branches $BRANCH1 frameworks/base
 switch_branches $BRANCH1 frameworks/native
-switch_branches $BRANCH2 kernel/oneplus/msm8996/
 switch_branches $BRANCH2 packages/apps/Camera2
 switch_branches $BRANCH2 packages/apps/Dialer
 switch_branches $BRANCH5 packages/apps/Eleven
