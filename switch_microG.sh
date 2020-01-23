@@ -86,7 +86,7 @@ switch_branches $BRANCH2 packages/apps/Trebuchet
 switch_branches $BRANCH4 system/bt
 switch_branches $BRANCH1 system/core
 switch_branches $BRANCH2 system/sepolicy
-switch_branches $BRANCH2 vendor/lineage
+switch_branches $BRANCH1 vendor/lineage
 switch_branches $BRANCH1 .repo/local_manifests
 switch_branches $BRANCH2 OTA
 
