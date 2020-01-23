@@ -78,6 +78,7 @@ switch_branches $BRANCH1 frameworks/native
 switch_branches $BRANCH2 packages/apps/Camera2
 switch_branches $BRANCH2 packages/apps/Dialer
 switch_branches $BRANCH5 packages/apps/Eleven
+switch_branches $BRANCH3 packages/apps/LineageParts
 switch_branches $BRANCH5 packages/apps/LockClock
 switch_branches $BRANCH2 packages/apps/Jelly
 switch_branches $BRANCH2 packages/apps/Settings
