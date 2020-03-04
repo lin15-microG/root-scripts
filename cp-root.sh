@@ -7,6 +7,7 @@ cat <<EOF
 build_amami.sh
 build_gts210vewifi.sh
 build_oneplus3.sh
+build_treble.sh
 make_clean.sh
 switch_microG.sh
 EOF
