@@ -58,7 +58,7 @@ case "$1" in
     PATCHV="N"
     ;;
   *) 
-    echo "usage: switch_microg.sh default | microG | reference"
+    echo "usage: switch_microg.sh default | microG | treble | reference"
     echo "-"
     echo "  default   - LineageOS 15.1 (with patches and fixed repos)"
     echo "  microG    - hardened microG build"
